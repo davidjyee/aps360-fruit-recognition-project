@@ -7,8 +7,8 @@ Image.init()
 
 imageDir = input('Directory you wish to resize: ')
 outputDir = input('Directory you wish to copy to: ')
-width = input('Width you\'d like to resize to: ')
-height = input('Height you\'d like to resize to: ')
+width = input('Size of square you\'d like to resize to: ')
+height = width
 extensionType = input('Output image extension: ')
 
 dirPath = Path(imageDir)
@@ -29,11 +29,11 @@ for imgPath in pbar:
     offsetY = 0
     if(img.width > img.height):
       offsetX = (img.width - size) / 2
-    else:
+    elif (img.width < img.height):
       offsetY = (img.height - size) / 2
 
     #Resize image
-    imgResized = img.resize((int(width), int(height)), box=(offsetX, offsetY, size, size))
+    imgResized = img.resize((int(width), int(height)), box=(offsetX, offsetY, offsetX + size, offsetY + size))
   
     #Figure out save path and create directory
     saveDirPath = Path(PurePath(outputDir) / PurePath(PurePath(imgPath).parent).relative_to(dirPath))
