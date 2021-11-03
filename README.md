@@ -11,7 +11,7 @@ pip install Pillow
 ```
 2. Ensure tqdm is installed as below:
 ```
-pip install Pillow
+pip install tqdm
 ```
 3. Run imageResize.py
 
