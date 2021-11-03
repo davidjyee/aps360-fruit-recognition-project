@@ -5,13 +5,14 @@ Fruit recognition model for APS360 course project
 In the main dir, imageResize.py is used to resize all the samples to the correct size and file type.
 
 Steps to use:
-1. Ensure pillow is installed as below:
+1. Ensure you have Python 3.10.0+ installed (not guaranteed to work on earlier or later versions).
+2. Ensure pillow is installed as below:
 ```
 pip install Pillow
 ```
-2. Ensure tqdm is installed as below:
+3. Ensure tqdm is installed as below:
 ```
 pip install tqdm
 ```
-3. Run imageResize.py
+4. Run imageResize.py
 
